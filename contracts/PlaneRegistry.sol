@@ -1,15 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-interface PlaneRegistry {
-    function nameOfPlanes() external view returns (string[] memory);
-
-    function addPlanes(string memory _make) external;
-
-    function removePlanes(uint index) external;
-}
-
-contract PlaneInteractor {
+contract PlaneRegistry {
     string[] public listOfAllPlanes;
 
     function nameOfPlanes() external view returns (string[] memory) {
