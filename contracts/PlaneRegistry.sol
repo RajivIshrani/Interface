@@ -13,6 +13,7 @@ contract PlaneRegistry {
     }
 
     function removePlanes(uint index) external {
-        delete listOfAllPlanes[index];
+        listOfAllPlanes[index] = listOfAllPlanes[listOfAllPlanes.length - 1];
+        listOfAllPlanes.pop();
     }
 }
