@@ -19,7 +19,7 @@ factoryContractInstance = async () => {
 describe("PlaneInteractor", () => {
     let planeInteractorInstance
     let planeInteractorAddress
-    
+
     // calling PlaneRegistry contract
     factoryContractInstance()
 
@@ -45,7 +45,7 @@ describe("PlaneInteractor", () => {
         const _contract = planeRegistryAddress
         const _index = 0
 
-        await planeInteractorInstance.calladdPlanes(_contract, _index)
+        await planeInteractorInstance.callremovePlanes(_contract, _index)
         console.log("succesfuly removed a plan")
     })
 })
