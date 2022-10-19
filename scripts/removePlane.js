@@ -31,8 +31,8 @@ async function main() {
     await planeInteractorInstance.calladdPlanes(address, "Vistara")
 
     console.log("----------- REMOVING PLANE NAME -----------")
-    const index = 4
-    await planeInteractorInstance.calladdPlanes(address, index)
+    const index = 1
+    await planeInteractorInstance.callremovePlanes(address, index)
 }
 main()
     .then(() => process.exit(0))
