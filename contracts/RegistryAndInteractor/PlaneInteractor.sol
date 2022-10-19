@@ -11,6 +11,6 @@ contract PlaneInteractor {
 
     function callremovePlanes(address _contract, uint256 _index) external {
         IPlaneRegistry A = IPlaneRegistry(_contract);
-        A.removePlanes(_gitindex);
+        A.removePlanes(_index);
     }
 }
