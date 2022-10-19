@@ -9,8 +9,8 @@ contract PlaneInteractor {
         A.addPlanes(_make);
     }
 
-    function callremovePlanes(address _contract, uint256 index) external {
+    function callremovePlanes(address _contract, uint256 _index) external {
         IPlaneRegistry A = IPlaneRegistry(_contract);
-        A.removePlanes(index);
+        A.removePlanes(_gitindex);
     }
 }
