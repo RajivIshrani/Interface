@@ -1,14 +1,20 @@
-async function main() {
-  const PlaneInteractor = await ethers.getContractFactory("PlaneInteractor");
+const hre = require("hardhat")
 
-  // Start deployment, returning a promise that resolves to a contract object
-  const plane_registry = await PlaneInteractor.deploy();
-  console.log("Contract deployed to address:", plane_registry.address);
+async function main() {
+    const planeInteractor = await hre.ethers.getContractFactory(
+        "PlaneInteractor"
+    )
+    const planeInteractorInstance = await planeInteractor.deploy()
+    await planeInteractorInstance.deployed()
+    const planeInteractorInstanceAddress = planeInteractorInstance.address
+    console.log(planeInteractorInstance)
+    console.log("PlaneInteractor Address:", planeInteractorInstanceAddress)
+    console.log("--------------------Deployed Successfully--------------------")
 }
 
 main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
+    .then(() => process.exit(0))
+    .catch(error => {
+        console.error(error)
+        process.exit(1)
+    })
