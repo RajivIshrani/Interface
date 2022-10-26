@@ -23,5 +23,12 @@ module.exports = {
             chainId: 80001,
             blockConfirmations: 6
         }
+    },
+    etherscan: {
+        // yarn hardhat verify --network <NETWORK> <CONTRACT_ADDRESS> <CONSTRUCTOR_PARAMETERS>
+        apiKey: {
+            goerli: ETHERSCAN_API_KEY,
+            polygon: POLYGONSCAN_API_KEY
+        }
     }
 }
